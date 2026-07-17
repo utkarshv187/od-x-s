@@ -1,23 +1,29 @@
-# Centricity OD×S — Information Architecture (v0.1, for approval)
+# Centricity OD×S — Information Architecture (v0.2, approved with changes)
 
-Single mobile app, 5-tab bottom bar. Every feature of both dashboards mapped below — nothing dropped.
+Single mobile app, **4-tab** bottom bar (approved change: Insights tab dissolved into Home; Acquire promoted to a Home primary action). Every feature of both dashboards mapped below — nothing dropped.
 
 ```
-                                   ┌─────────────────────┐
-                                   │  Splash → Login      │
-                                   │  (biometric re-entry)│
-                                   └──────────┬──────────┘
-      ┌────────────┬────────────────┬─────────┴──────┬────────────────┐
-      ▼            ▼                ▼                ▼                ▼
-   🏠 HOME      🔍 DISCOVER      💼 PORTFOLIO      ✨ INSIGHTS       ⋯ MORE
+                          ┌─────────────────────┐
+                          │  Splash → Login      │
+                          │  (biometric re-entry)│
+                          └──────────┬──────────┘
+      ┌────────────┬────────────────┴┬────────────────┐
+      ▼            ▼                 ▼                ▼
+   🏠 HOME      🔍 DISCOVER       💼 PORTFOLIO       ⋯ MORE
 ```
+
+**v0.2 changes** (per approval):
+- **Acquire — client onboarding** is now the first primary action card on Home (advisor's first job); the 3-step flow is a full-screen push.
+- **Insights tab removed.** NBA carousel + nudges live on Home; the bell icon opens Alerts & Flags (badged); an "Insights Studio" section on Home opens the Studio dashboard (KPI tiles) and Portfolio services; Archive links from the "what changed" section and More. No functionality dropped — see Tab 4 → redistributed rows in the audit table.
 
 ## Tab 1 — Home (command center)
-Merged Screener-home + Sentinel dashboard.
-- Greeting + cycle chip (15 Jun 2026 ▾ — 6 cycles) + search + alerts bell (badge)
+Merged Screener-home + Sentinel dashboard + Insights Studio surface.
+- Greeting + cycle chip (15 Jun 2026 ▾ — 6 cycles) + search + **alerts bell (badge) → Alerts & Flags screen**
+- **Acquire CTA — "Onboard a client"** (primary action card, metal CTA)
 - Cycle summary stat row: fund universe 2,014 · 45 SEBI categories · update date
-- **Next-Best-Action carousel** (Sentinel NBA — AI gradient cards)
-- Quick Actions grid (Screener / One-Pagers / Build / Compare / Onboard client / Review due)
+- **Next-Best-Action carousel** (Sentinel NBA — AI gradient cards) + nudges feed
+- **Insights Studio section** → Studio dashboard (KPI tiles: AUM, active clients, reviews due, NBA acceptance) · Portfolio services
+- Quick Actions grid (Screener / One-Pagers / Build / Compare / Review due)
 - **Top 10 — Centricity Rank** (asset-class picker → mobile table, frozen fund column, 22-param score)
 - Manager switches · top 6 (→ full list in Insights/Flags)
 - Universe composition (asset-class donut + active/passive split)
@@ -43,19 +49,18 @@ Merged Portfolio Builder + Sentinel Manage.
 - **Watchlist** — swipe rows, delta since added, alerts toggle per fund
 - **Portfolio drift** — drift bars per household, rebalance suggestions
 
-## Tab 4 — Insights (intelligence & monitooring)
-Merged Insights Studio + Flags/Alerts + Archive.
-- **Insights dashboard** — KPI tiles (AUM, active clients, reviews due, NBA acceptance)
-- **NBA queue** — full next-best-action list, accept/dismiss, priority P1–P5
-- **Nudges** — client nudge feed + templates
-- **Alerts & Flags** — manager movement, AUM breaches, style drift; filterable, per-fund flag history (MF "Flags" page + planned alerts panel)
-- **Archive / cycle history** — 6 cycles, cycle-over-cycle deltas, reclassifications
-- **Portfolio services** — service requests status
+## Former Insights tab — redistributed (v0.2)
+- **Insights Studio dashboard** (KPI tiles) + **Portfolio services** → full-screen, entered from Home "Insights Studio" section
+- **NBA queue** (accept/dismiss, P1–P5) → "view all" from Home NBA carousel
+- **Nudges** → Home nudges feed
+- **Alerts & Flags** (manager movement, AUM breaches, style drift, per-fund history) → Home bell icon, badged
+- **Archive / cycle history** (6 cycles, deltas, reclassifications) → footer link of Home "what changed" + More
 
-## Tab 5 — More (acquire, support, knowledge, profile)
-- **Acquire — client onboarding** (Sentinel): 3-step mobile flow — 1) client & CAS/PMS/AIF selection, 2) document/CAS import, 3) risk profiling → summary
+## Tab 4 — More (support, knowledge, profile)
+- **Acquire flow** — moved to Home primary CTA (v0.2); 3-step full-screen flow: 1) client & CAS/PMS/AIF selection, 2) document/CAS import, 3) risk profiling → summary
 - **24×7 Support** — digital advisor chat (AI gradient), Zoho ticket handoff, FAQ
 - **Knowledge Center** — glossary (Score & Rank, Returns, Risk & Ratios, Portfolio & Holdings, Debt metrics, Costs & Taxes) as searchable accordion
+- **Archive** — secondary entry
 - **Profile & settings** — partner identity, theme (dark/light), biometric lock, saved views, export history, sign out
 
 ## Feature-mapping audit (source → destination)
