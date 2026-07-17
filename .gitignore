@@ -1,0 +1,8 @@
+# never commit credentials or secrets
+*.env
+.env*
+*credential*
+*secret*
+*.key
+.DS_Store
+node_modules/
