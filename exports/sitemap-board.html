@@ -1,0 +1,70 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050608;color:#FAFAF7;font-family:Figtree,sans-serif;padding:48px;width:1440px}
+h1{font-size:34px;font-weight:700}
+.sub{color:#7B8699;font-size:14px;margin:6px 0 32px}
+.cols{display:flex;gap:16px}
+.col{flex:1;background:#0D1017;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:16px}
+.col h2{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:12px}
+.dot{width:10px;height:10px;border-radius:3px}
+.s{background:#14181F;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:9px 12px;margin-bottom:8px;font-size:12.5px;font-weight:600}
+.s small{display:block;font-weight:400;color:#7B8699;font-size:11px;margin-top:2px}
+.s.sec{margin-left:14px;background:#0D1017;border-style:dashed}
+.src{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.5px;padding:1px 6px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.mf{background:rgba(184,158,85,.16);color:#D4BF7B}
+.sn{background:rgba(74,108,255,.16);color:#9DB1FF}
+.both{background:rgba(16,185,129,.16);color:#5EEAD4}
+.legend{margin-top:28px;color:#B4BFD0;font-size:12.5px}
+.entry{background:#14181F;border:1px solid rgba(184,158,85,.34);border-radius:14px;padding:10px 16px;display:inline-block;font-size:13px;font-weight:600;margin-bottom:20px}
+</style></head><body>
+<h1>Centricity OD×S — Sitemap / IA</h1>
+<div class="sub">One app · 5 tabs · every feature from both dashboards mapped · v0.1 for approval</div>
+<div class="entry">Splash → Login (email + biometric re-entry) → Home</div>
+<div class="cols">
+<div class="col"><h2><span class="dot" style="background:#B89E55"></span>Home</h2>
+<div class="s">Cycle summary + cycle switcher<span class="src mf">MF</span><small>2,014 funds · 45 categories · update date</small></div>
+<div class="s">NBA carousel<span class="src sn">SNT</span><small>next-best-actions, P1–P5</small></div>
+<div class="s">Quick actions grid<span class="src both">BOTH</span></div>
+<div class="s">Top 10 — Centricity Rank<span class="src mf">MF</span><small>22-param score · frozen-column table</small></div>
+<div class="s">Manager switches · top 6<span class="src mf">MF</span></div>
+<div class="s">Universe composition<span class="src mf">MF</span><small>asset class · active vs passive</small></div>
+<div class="s">What changed since last cycle<span class="src mf">MF</span><small>entrants · dropped · gainers · losers</small></div>
+<div class="s sec">Light-theme variant delivered too</div></div>
+
+<div class="col"><h2><span class="dot" style="background:#A855F7"></span>Discover</h2>
+<div class="s">Scope: MF · PMS · AIF · SIF · Stocks<span class="src both">BOTH</span><small>Product Discovery merged in</small></div>
+<div class="s">Screener<span class="src mf">MF</span><small>filters · saved views · sort · export</small></div>
+<div class="s sec">Filter bottom sheet · edit-weights sheet</div>
+<div class="s">Fund One-Pager<span class="src mf">MF</span><small>returns · risk · rolling · holdings · manager</small></div>
+<div class="s">Compare<span class="src mf">MF</span><small>7 funds × 6 cycles · 8 metric tabs</small></div>
+<div class="s">Overlap analysis<span class="src both">BOTH</span><small>heat matrix · common holdings</small></div>
+<div class="s">Stocks universe<span class="src mf">MF</span></div>
+<div class="s">SIF research<span class="src mf">MF</span></div>
+<div class="s">Manager profiles<span class="src mf">MF</span></div></div>
+
+<div class="col"><h2><span class="dot" style="background:#10B981"></span>Portfolio</h2>
+<div class="s">Households<span class="src sn">SNT</span><small>list → detail · holdings · allocation</small></div>
+<div class="s sec">Quarterly reviews · drift meter · rebalance</div>
+<div class="s">Portfolio Builder<span class="src mf">MF</span><small>10-step mobile stepper · risk profile</small></div>
+<div class="s sec">Result: model portfolio · donut · export PPT/PDF</div>
+<div class="s">Portfolio review<span class="src both">BOTH</span><small>CAS import → gap vs model</small></div>
+<div class="s">Watchlist<span class="src mf">MF</span><small>swipe rows · delta since added</small></div></div>
+
+<div class="col"><h2><span class="dot" style="background:#06B6D4"></span>Insights</h2>
+<div class="s">Insights dashboard<span class="src sn">SNT</span><small>KPI tiles · AUM · reviews due</small></div>
+<div class="s">NBA queue<span class="src sn">SNT</span><small>accept / dismiss · priority</small></div>
+<div class="s">Nudges<span class="src sn">SNT</span></div>
+<div class="s">Alerts & flags<span class="src both">BOTH</span><small>manager moves · AUM breach · style drift</small></div>
+<div class="s">Archive / cycle history<span class="src mf">MF</span><small>6 cycles · deltas · reclassifications</small></div>
+<div class="s">Portfolio services<span class="src sn">SNT</span></div></div>
+
+<div class="col"><h2><span class="dot" style="background:#F59E0B"></span>More</h2>
+<div class="s">Acquire — onboarding<span class="src sn">SNT</span><small>3 steps: client · CAS/PMS/AIF · risk profile</small></div>
+<div class="s">24×7 Support<span class="src sn">SNT</span><small>digital advisor chat · Zoho handoff</small></div>
+<div class="s">Knowledge Center<span class="src mf">MF</span><small>searchable glossary accordion</small></div>
+<div class="s">Profile & settings<span class="src both">BOTH</span><small>theme · biometric · saved views · sign out</small></div></div>
+</div>
+<div class="legend">Tags mark feature origin: <span class="src mf">MF</span> MF Screener · <span class="src sn">SNT</span> Sentinel · <span class="src both">BOTH</span> merged. &nbsp;Minimum screen set: 21 screens (list in sitemap.md) — Home in dark + light, rest dark.</div>
+</body></html>

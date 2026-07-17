@@ -1,0 +1,127 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--canvas:#050608;--raised:#0D1017;--card:#14181F;--sheet:#1A1F28;--hover:#1F242E;--pressed:#252B36;
+--t1:#FAFAF7;--t2:#B4BFD0;--t3:#7B8699;--gold:#B89E55;--gold4:#D4BF7B;--blue:#4A6CFF;--pos:#10B981;--neg:#931621;--negOn:#E4536B;--warn:#D97706;
+--bd:rgba(255,255,255,0.06);--bds:rgba(255,255,255,0.12);--goldbd:rgba(184,158,85,0.34);--goldtint:rgba(184,158,85,0.14);
+--metal:linear-gradient(169.66deg,#F2E6CE -117%,#D8BC9C -37%,#B89E55 50%,#8F7A3E 124%,#C9A888 218%);
+--ai:linear-gradient(135deg,#4A6CFF,#8B5CF6)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--canvas);color:var(--t1);font-family:Figtree,sans-serif;padding:48px;width:1440px}
+h1{font-size:34px;font-weight:700}
+.sub{color:var(--t3);font-size:14px;margin:6px 0 36px}
+h2{font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:40px 0 16px;font-family:'JetBrains Mono',monospace}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.sw{width:118px}.sw .b{height:64px;border-radius:14px;border:1px solid var(--bds)}
+.sw .n{font-size:11px;color:var(--t2);margin-top:6px}.sw .v{font-size:10px;color:var(--t3);font-family:'JetBrains Mono',monospace}
+.type div{margin-bottom:10px}
+.micro{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--t3)}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25)}
+.pill{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:14px 28px;font-weight:700;font-size:15px}
+.chip{display:inline-flex;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:500;border:1px solid var(--bds);color:var(--t2)}
+.chip.on{background:var(--goldtint);border-color:var(--goldbd);color:var(--gold4)}
+.tabbar{width:375px;background:rgba(13,16,23,.72);backdrop-filter:blur(20px);border:1px solid var(--bd);border-top:1px solid rgba(255,255,255,.09);border-radius:24px;display:flex;padding:10px 8px;justify-content:space-around}
+.tab{text-align:center;font-size:10px;color:var(--t3);width:60px}.tab.on{color:var(--gold4)}
+.tab .ic{font-size:20px;margin-bottom:2px}
+.spark{display:flex;align-items:flex-end;gap:2px;height:28px}.spark i{width:4px;background:var(--pos);border-radius:2px;display:block}
+table{border-collapse:collapse;font-size:12px}td,th{padding:8px 12px;text-align:right;border-bottom:1px solid var(--bd)}
+th{color:var(--t3);font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase}
+td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:var(--card)}
+</style></head><body>
+<h1>Centricity OD×S — Design System</h1>
+<div class="sub">Dark-first · 375×812 · Figtree / Tabular / JetBrains Mono · champagne gold on #050608 · v0.1 — pending reconciliation with brand Figma (access blocked)</div>
+
+<h2>Surfaces</h2><div class="row">
+<div class="sw"><div class="b" style="background:#050608"></div><div class="n">canvas</div><div class="v">#050608</div></div>
+<div class="sw"><div class="b" style="background:#0D1017"></div><div class="n">raised</div><div class="v">#0D1017</div></div>
+<div class="sw"><div class="b" style="background:#14181F"></div><div class="n">card</div><div class="v">#14181F</div></div>
+<div class="sw"><div class="b" style="background:#1A1F28"></div><div class="n">sheet</div><div class="v">#1A1F28</div></div>
+<div class="sw"><div class="b" style="background:#1F242E"></div><div class="n">hover</div><div class="v">#1F242E</div></div>
+<div class="sw"><div class="b" style="background:#252B36"></div><div class="n">pressed</div><div class="v">#252B36</div></div>
+<div class="sw"><div class="b" style="background:rgba(13,16,23,.72);backdrop-filter:blur(20px)"></div><div class="n">glass</div><div class="v">72% + blur20</div></div></div>
+
+<h2>Accent & data</h2><div class="row">
+<div class="sw"><div class="b" style="background:#B89E55"></div><div class="n">gold 500</div><div class="v">#B89E55</div></div>
+<div class="sw"><div class="b" style="background:#D4BF7B"></div><div class="n">gold 400</div><div class="v">#D4BF7B</div></div>
+<div class="sw"><div class="b" style="background:var(--metal)"></div><div class="n">metal CTA</div><div class="v">gradient</div></div>
+<div class="sw"><div class="b" style="background:var(--ai)"></div><div class="n">AI gradient</div><div class="v">4A6CFF→8B5CF6</div></div>
+<div class="sw"><div class="b" style="background:#10B981"></div><div class="n">positive</div><div class="v">#10B981</div></div>
+<div class="sw"><div class="b" style="background:#931621"></div><div class="n">negative</div><div class="v">#931621</div></div>
+<div class="sw"><div class="b" style="background:#E4536B"></div><div class="n">neg on dark</div><div class="v">#E4536B</div></div>
+<div class="sw"><div class="b" style="background:#D97706"></div><div class="n">warning</div><div class="v">#D97706</div></div>
+<div class="sw"><div class="b" style="background:#4A6CFF"></div><div class="n">info / link</div><div class="v">#4A6CFF</div></div></div>
+
+<h2>Module tints (wayfinding)</h2><div class="row">
+<span class="pill" style="background:rgba(99,102,241,.16);color:#A5A8FF">Acquire</span>
+<span class="pill" style="background:rgba(16,185,129,.16);color:#5EEAD4">Manage</span>
+<span class="pill" style="background:rgba(168,85,247,.16);color:#D8B4FE">Discover</span>
+<span class="pill" style="background:rgba(245,158,11,.16);color:#FCD34D">Serve</span>
+<span class="pill" style="background:rgba(6,182,212,.16);color:#67E8F9">Insights</span></div>
+
+<h2>Type scale</h2><div class="type">
+<div style="font-size:34px;font-weight:700">Display 34 — ₹23,17,900</div>
+<div style="font-size:28px;font-weight:700">H1 28 — Fund One-Pager</div>
+<div style="font-size:22px;font-weight:600">H2 22 — Top 10 · Centricity Rank</div>
+<div style="font-size:18px;font-weight:600">H3 18 — What changed this cycle</div>
+<div style="font-size:16px;color:var(--t2)">Body-lg 16 — 1,250 funds scored on 22 parameters</div>
+<div style="font-size:14px;color:var(--t2)">Body 14 — Manager change · R. Srinivasan → Ruchit Mehta</div>
+<div style="font-size:12px;color:var(--t3)">Caption 12 — Returns annualised, CAGR ≥ 1Y</div>
+<div class="micro">Micro label 10 · 3Y CAGR · AUM ₹ CR · SCORE</div>
+<div class="num" style="font-size:24px;font-weight:600;color:#F7F4EA">Numeral-lg — ₹1,01,822 Cr · +22.89%</div></div>
+
+<h2>Core components (sample)</h2>
+<div class="row" style="align-items:flex-start">
+<div class="card" style="width:343px">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div><div class="micro" style="margin-bottom:4px">#3 · Large Cap</div>
+    <div style="font-size:15px;font-weight:600">Nippon India Large Cap Fund</div>
+    <div style="font-size:12px;color:var(--t3)">Nippon Life India AMC</div></div>
+    <div style="text-align:right"><div style="width:44px;height:44px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px" class="num">92</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;margin-top:14px;align-items:flex-end">
+    <div><div class="micro">AUM</div><div class="num" style="font-weight:600">₹51,660 Cr</div></div>
+    <div><div class="micro">3Y</div><div class="num" style="font-weight:600;color:var(--pos)">+13.71%</div></div>
+    <div><div class="micro">YTD</div><div class="num" style="font-weight:600;color:var(--negOn)">−6.02%</div></div>
+    <div class="spark"><i style="height:8px"></i><i style="height:14px"></i><i style="height:10px"></i><i style="height:18px"></i><i style="height:24px"></i><i style="height:20px"></i><i style="height:28px"></i></div>
+  </div>
+</div>
+<div style="width:343px;display:flex;flex-direction:column;gap:12px">
+  <div class="card" style="background:var(--raised);border:1px solid transparent;border-image:linear-gradient(135deg,#4A6CFF,#8B5CF6) 1;border-radius:20px">
+    <div class="pill" style="background:var(--ai);color:#fff;margin-bottom:8px">✦ Next Best Action · P2</div>
+    <div style="font-size:14px;font-weight:600">Sharma household drifted 6.2% from model</div>
+    <div style="font-size:12px;color:var(--t3);margin-top:4px">Suggest rebalance before quarterly review · Thu</div>
+  </div>
+  <div style="display:flex;gap:8px">
+    <span class="pill" style="background:rgba(16,185,129,.14);color:#5EEAD4">▲ 16 ranks</span>
+    <span class="pill" style="background:#931621;color:#FAFAF7">▼ −7 · #11</span>
+    <span class="pill" style="background:rgba(217,119,6,.14);color:#FCD34D">AUM breach</span>
+  </div>
+  <div style="display:flex;gap:8px"><span class="chip on">Equity</span><span class="chip">Hybrid</span><span class="chip">Debt</span><span class="chip">Passive</span></div>
+  <div style="display:flex;gap:10px"><span class="btn" style="background:var(--metal);color:#0B1220">Build portfolio</span>
+  <span class="btn" style="background:transparent;border:1px solid var(--bds);color:var(--t1)">Compare</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+  <div class="card" style="padding:0;overflow:hidden;width:360px">
+    <table><tr><th>Fund</th><th>AUM</th><th>1Y</th><th>3Y</th><th>Score</th></tr>
+    <tr><td style="font-weight:600">HDFC Defence</td><td class="num">₹9,724</td><td class="num" style="color:var(--pos)">+11.43%</td><td class="num" style="color:var(--pos)">+40.88%</td><td class="num" style="color:var(--gold4)">97</td></tr>
+    <tr><td style="font-weight:600">SBI PSU Fund</td><td class="num">₹6,594</td><td class="num" style="color:var(--pos)">+9.25%</td><td class="num" style="color:var(--pos)">+28.80%</td><td class="num" style="color:var(--gold4)">95</td></tr>
+    <tr><td style="font-weight:600">Nippon Large Cap</td><td class="num">₹51,660</td><td class="num" style="color:var(--negOn)">−0.81%</td><td class="num" style="color:var(--pos)">+13.71%</td><td class="num" style="color:var(--gold4)">92</td></tr></table>
+    <div class="micro" style="padding:8px 12px">Mobile table · frozen fund column · h-scroll metrics</div>
+  </div>
+  <div class="tabbar">
+    <div class="tab on"><div class="ic">◉</div>Home</div>
+    <div class="tab"><div class="ic">◎</div>Discover</div>
+    <div class="tab"><div class="ic">▣</div>Portfolio</div>
+    <div class="tab"><div class="ic">✦</div>Insights</div>
+    <div class="tab"><div class="ic">≡</div>More</div>
+  </div>
+</div></div>
+
+<h2>Radius · spacing · elevation · motion</h2>
+<div style="font-size:13px;color:var(--t2);line-height:2">
+Radii — chips <b>pill</b> · controls <b>10–14</b> · cards <b>16–20</b> · sheets <b>24</b> &nbsp;|&nbsp; 4pt grid · 16px gutters · 12px card gap<br>
+Shadows — card / raised / overlay ramp + gold rim-glow (max one per screen) &nbsp;|&nbsp; Motion — 120 / 220 / 400ms · cubic-bezier(0.4,0,0.2,1) · spring for sheets · pressed scale 0.97
+</div>
+</body></html>
